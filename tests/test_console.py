@@ -46,11 +46,11 @@ class TestConsoleClass(unittest.TestCase):
     def test_help_quit_docstring(self):
         """ Tests docstring for the help_quit method of HBNBCommand class """
         self.assertTrue(len(console.HBNBCommand.help_quit.__doc__) > 0)
-        
+
     def test_do_EOF_docstring(self):
         """ Tests docstring for the do_EOF method of HBNBCommand class """
         self.assertTrue(len(console.HBNBCommand.do_EOF.__doc__) > 0)
-    
+
     def test_help_EOF_docstring(self):
         """ Tests docstring for the help_EOF method of HBNBCommand class """
         self.assertTrue(len(console.HBNBCommand.help_EOF.__doc__) > 0)
@@ -80,7 +80,7 @@ class TestConsoleClass(unittest.TestCase):
         self.assertTrue(len(console.HBNBCommand.do_destroy.__doc__) > 0)
 
     def test_help_destroy_docstring(self):
-        """ Tests docstring for the help_destroy method of HBNBCommand class """
+        """ Tests docstring for help_destroy method of HBNBCommand class """
         self.assertTrue(len(console.HBNBCommand.help_destroy.__doc__) > 0)
 
     def test_do_all_docstring(self):
