@@ -3,7 +3,7 @@
 import os
 import unittest
 import pycodestyle
-import console
+from console import HBNBCommand
 
 
 class TestConsoleClass(unittest.TestCase):
