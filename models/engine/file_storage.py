@@ -9,8 +9,33 @@ class FileStorage:
     __objects = {}
 
     def all(self):
-        """Returns a dictionary of models currently in storage"""
-        return FileStorage.__objects
+        """
+        Returns a dictionary of models currently in storage,
+        can also filter by class type
+
+        Args:
+        cls (class or str): The class type or class name to filter objects.
+        If None, returns all objects
+        """
+        # If cls is not None, filter objects by class type
+        if cls is not None:
+            # If cls is a string, convert it to a class object using getattr
+            if isinstance(cls, str):
+                cls = getattr(models, cls, None)
+
+            # If cls is not None after conversion, filter objects by cls type
+            if cls is not None:
+                return {
+                    obj_id: obj
+                    for obj_id, obj in self.__objects.items()
+                    if isinstance(obj, cls)
+                }
+            else:
+                # If cls is None after conversion, return an empty dictionary
+                return {}
+
+        # If cls is None, return all objects without filtering
+        return self.__objects
 
     def new(self, obj):
         """Adds new object to storage dictionary"""
