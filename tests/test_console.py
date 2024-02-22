@@ -12,7 +12,7 @@ class TestConsoleClass(unittest.TestCase):
     @classmethod
     def setUp(cls):
         """ Preparation method executed before each test """
-        cls.konsol = console.HBNBCommand()
+        cls.konsol = HBNBCommand()
 
     @classmethod
     def tearDown(cls):
