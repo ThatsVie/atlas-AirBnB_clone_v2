@@ -113,50 +113,50 @@ class HBNBCommand(cmd.Cmd):
         """ Overrides the emptyline method of CMD """
         pass
 
-    def do_create(self, args)
-    """ Create an object of any class with given parameters """
-    if not args:
-        print("** class name missing **")
-        return
+    def do_create(self, args):
+        """ Create an object of any class with given parameters """
+        if not args:
+            print("** class name missing **")
+            return
+        
+        # Split the arguments by spaces to separate class name and parameters
+        args_list = args.split()
 
-    # Split the arguments by spaces to separate class name and parameters
-    args_list = args.split()
+        class_name = args_list[0]
+        if class_name not in self.classes:
+            print("** class doesn't exist **")
+            return
 
-    class_name = args_list[0]
-    if class_name not in self.classes:
-        print("** class doesn't exist **")
-        return
+        # Extract the parameters from the arguments list
+        parameters = {}
+        for arg in args_list[1:]:
+            # Split each argument by '=' to separate key and value
+            parts = arg.split('=')
+            if len(parts) != 2:
+                print(f"Skipping invalid parameter: {arg}")
+                continue
 
-    # Extract the parameters from the arguments list
-    parameters = {}
-    for arg in args_list[1:]:
-        # Split each argument by '=' to separate key and value
-        parts = arg.split('=')
-        if len(parts) != 2:
-            print(f"Skipping invalid parameter: {arg}")
-            continue
+            key = parts[0]
+            value = parts[1].replace('_', ' ')  # Replace the underscores with spaces
 
-        key = parts[0]
-        value = parts[1].replace('_', ' ')  # Replace underscores with spaces
-        # Check if the value is enclosed in double quotes and remove them
-        if value.startswith('"') and value.endswith('"'):
-            value = value[1:-1]
+            # Check if the value is enclosed in double quotes and remove them
+            if value.startswith('"') and value.endswith('"'):
+                value = value[1:-1]
 
-        # Try converting the value to integer or float if possible
-        try:
-            if '.' in value:
-                value = float(value)
-            else:
-                value = int(value)
-        except ValueError:
-            pass  # Keep the value as string if it's not convertible to int or float
+                # Try converting the value to integer or float if possible
+                try:
+                    if '.' in value:
+                        value = float(value)
+                    else:
+                        value = int(value)
+                except ValueError:
+                    pass  # Keep the value as string if it's not convertible to int or float
+                parameters[key] = value
 
-        parameters[key] = value
-
-    # Create a new instance of the specified class with the given parameters
-    new_instance = self.classes[class_name](**parameters)
-    new_instance.save()  # Save the new instance
-    print(new_instance.id)
+                # Create a new instance of the specified class with the given parameters
+                new_instance = self.classes[class_name](**parameters)
+                new_instance.save()  # Save the new instance
+                print(new_instance.id)
 
 
     def help_create(self):
