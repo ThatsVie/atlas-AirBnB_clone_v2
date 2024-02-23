@@ -27,30 +27,32 @@ class FileStorage:
 
     def all(self, cls=None):
         """
-        Returns a dictionary of models currently in storage,
-        can also filter by class type
-
-        Args:
-        cls (class or str): The class type or class name to filter objects.
-        If None, returns all objects
-        """
-        # If cls is not None, filter objects by class type
-        if cls is not None:
-            # If cls is a string, convert it to a class object using getattr
-            cls = getattr(models, cls, None)
-            # If cls is not None after conversion, filter objects by cls type
-            if cls is not None:
-                return {
-                    obj_id: obj
-                    for obj_id, obj in self.__objects.items()
-                    if isinstance(obj, cls)
-                }
-            else:
-                # If cls is None after conversion, return an empty dictionary
-                return {}
-
-        # If cls is None, return all objects without filtering
-        return self.__objects
+    Returns a dictionary of models currently in storage.
+    
+    Args:
+        cls (class or str): The class type or class name to filter objects. If None, returns all objects.
+   
+    """
+    # Check if the cls argument is provided (i.e., not None).
+    if cls is not None:
+        # Check if the type of cls is a string.
+        if type(cls) is str:
+            # If cls is a string, attempts to retrieve the corresponding class object from the classes dictionary.
+            cls = classes.get(cls)
+        # Initializes an empty dictionary to store the filtered objects.
+        obj_dict = {}
+        # Iterates over the key-value pairs in the __objects dictionary.
+        for key, value in self.__objects.items():
+            # Checks if the type of the value matches the specified class type (cls).
+            if type(value) is cls:
+                # If the value's type matches the specified class type, adds the key-value pair to the obj_dict dictionary.
+                obj_dict[key] = value
+        # Returns the dictionary containing the filtered objects.
+        return obj_dict
+    else:
+        # If cls is None, indicating no filtering is requested, returns the entire dictionary of objects
+        # stored in the __objects attribute of the FileStorage class.
+        return FileStorage.__objects
 
     def new(self, obj):
         """Adds new object to storage dictionary"""
