@@ -12,7 +12,7 @@ class BaseModel:
             from models import storage
             self.id = str(uuid.uuid4())
             self.created_at = datetime.now()
-            time.sleep(0.000001) # Delay for test
+            time.sleep(0.000001)  # Delay for test
             self.updated_at = datetime.now()
             storage.new(self)
         else:
