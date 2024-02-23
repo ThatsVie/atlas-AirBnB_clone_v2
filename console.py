@@ -118,7 +118,6 @@ class HBNBCommand(cmd.Cmd):
         if not args:
             print("** class name missing **")
             return
-        
         # Split the arguments by spaces to separate class name and parameters
         args_list = args.split()
 
@@ -137,7 +136,8 @@ class HBNBCommand(cmd.Cmd):
                 continue
 
             key = parts[0]
-            value = parts[1].replace('_', ' ')  # Replace the underscores with spaces
+            value = parts[1].replace('_', ' ')  
+            # Replace the underscores with spaces
 
             # Check if the value is enclosed in double quotes and remove them
             if value.startswith('"') and value.endswith('"'):
@@ -150,14 +150,13 @@ class HBNBCommand(cmd.Cmd):
                     else:
                         value = int(value)
                 except ValueError:
-                    pass  # Keep the value as string if it's not convertible to int or float
+                    pass  # Keep the value as string
                 parameters[key] = value
 
-                # Create a new instance of the specified class with the given parameters
+                # Create a new instance of the class w/ new par.
                 new_instance = self.classes[class_name](**parameters)
                 new_instance.save()  # Save the new instance
                 print(new_instance.id)
-
 
     def help_create(self):
         """ Help information for the create method """
