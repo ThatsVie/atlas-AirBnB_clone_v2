@@ -91,4 +91,3 @@ class FileStorage:
             if key in self.__objects:
                 # If the key exists, delete object from the storage dictionary
                 del self.__objects[key]
-
