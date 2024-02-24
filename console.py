@@ -152,7 +152,7 @@ class HBNBCommand(cmd.Cmd):
                     value = int(value)
                 except ValueError:
                     print(f"Skipping invalid parameter: {arg}")
-                
+
             parameters[key] = value
 
         # Create a new instance of the class w/ new par.
