@@ -25,24 +25,13 @@ class FileStorage:
         cls (class or str): The class type or class name to filter objects.
         If None, returns all objects
         """
-        # Check if cls is provided
+        # If cls is not None, filter objects by class type
         if cls is not None:
-            # Check if cls is a string, if so, convert it to class
-            if isinstance(cls, str):
-                cls = classes.get(cls)
-            # Initialize an empty dictionary to store filtered objects
-            obj_dict = {}
-            # Iterate over all objects in storage
-            for key, value in self.__objects.items():
-                # Check if the type of the object matches cls or its subclass
-                if isinstance(value, cls):
-                    # Add the object to the dictionary
-                    obj_dict[key] = value
-            # Return the dictionary containing filtered objects
-            return obj_dict
+            return self.__objects.copy()
         else:
-            # If cls is None, return all objects in storage
-            return self.__objects
+            return {key: obj
+                    for key, obj in self.__objects.items()
+                    if cls is None or isinstance(obj, cls)}
 
 
     def new(self, obj):
