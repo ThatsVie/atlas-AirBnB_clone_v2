@@ -33,13 +33,13 @@ class FileStorage:
 
             # If cls is not None after conversion, filter objects by cls type
             if cls is not None:
-                return {
+                return [
                     obj for obj in self.__objects.items()
                     if isinstance(obj, cls)
-                }
+                ]
             else:
                 # If cls is None after conversion, return an empty dictionary
-                return {}
+                return []
 
         # If cls is None, return list
         return list(self.__objects.values())
