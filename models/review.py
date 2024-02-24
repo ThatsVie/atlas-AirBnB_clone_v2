@@ -4,7 +4,6 @@ from models.base_model import Base, BaseModel
 from sqlalchemy import Column, ForeignKey, String
 
 
-
 class Review(BaseModel, Base):
     """ Review classto store review information """
     __tablename__ = "reviews"
