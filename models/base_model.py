@@ -2,11 +2,13 @@
 """This module defines a base class for all models in our hbnb clone"""
 from uuid import uuid4
 from datetime import datetime
-from sqlalchemy import Column, DateTime, String
+
+from sqlalchemy import Column, String, DateTime
 from sqlalchemy.ext.declarative import declarative_base
+import models
+import time
 
 Base = declarative_base()
-
 
 
 class BaseModel:
@@ -53,19 +55,17 @@ class BaseModel:
         storage.save()
 
     def to_dict(self):
-        """Return dictionary representation of BaseModel instance"""
-
-        # Copy instance dictionary to avoid modifying original object
-        instance_dict = self.__dict__.copy()
-
-        # Add __class__ key with class name to dictionary
-        instance_dict.update({
-            '__class__': type(self).__name__,
-            'created_at': self.created_at.isoformat(),
-            'updated_at': self.updated_at.isoformat()
-        })
-
-        # Remove SQLAlchemy instance state key if present
-        instance_dict.pop('_sa_instance_state', None)
-
-        return instance_dict
+        """Convert instance into dict format"""
+        dictionary = {}
+        dictionary.update(self.__dict__)
+        dictionary.update({'__class__':
+                          (str(type(self)).split('.')[-1]).split('\'')[0]})
+        dictionary['created_at'] = self.created_at.isoformat()
+        dictionary['updated_at'] = self.updated_at.isoformat()
+        if '_sa_instance_state' in dictionary.keys():
+            dictionary.pop('_sa_instance_state')
+        return dictionary
+    
+    def delete(self):
+        """Deletes the current instance from the storage"""
+        models.storage.delete(self)
