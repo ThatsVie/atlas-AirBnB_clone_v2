@@ -188,31 +188,12 @@ class HBNBCommand(cmd.Cmd):
             print("** instance id missing **")
             return
 
-        # Construct the key using the class name and ID
         key = c_name + "." + c_id
-
-        # Initialize obj as None to store the found object
-        obj = None
-
-        # Iterate over each object stored in the storage
-        for stored_obj in storage.all().values():
-
-            # Check if the ID and class name match the provided values
-            if stored_obj.id == c_id and
-                    stored_obj.__class__.__name__ == c_name:
-
-                # If a matching object is found, assign it to obj and exit loop
-                obj = stored_obj
-                break
-
-        # If no matching object is found, print a message indicating so
+        obj = storage.get(c_name, c_id)
         if not obj:
             print("** no instance found **")
-
-        # Otherwise, print the found object
         else:
             print(obj)
-
 
     def help_show(self):
         """ Help information for the show command """
