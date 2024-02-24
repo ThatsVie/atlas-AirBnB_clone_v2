@@ -34,6 +34,7 @@ class_list = [
     Review
 ]
 
+
 class DBStorage:
     """This class manages storage of hbnb models into database."""
 
