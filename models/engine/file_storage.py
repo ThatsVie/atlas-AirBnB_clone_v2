@@ -27,7 +27,7 @@ class FileStorage:
         """
         # If cls is not None, filter objects by class type
         if cls is not None:
-           return self.__objects.copy()
+            return self.__objects.copy()
         else:
             return {key: obj
                     for key, obj in self.__objects.items()
