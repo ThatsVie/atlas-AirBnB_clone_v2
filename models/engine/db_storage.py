@@ -12,6 +12,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import scoped_session
 from sqlalchemy.orm import sessionmaker
 
+
 # Dictionary mapping class names to their corresponding classes
 classes = {
     'User': User,
