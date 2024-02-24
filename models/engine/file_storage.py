@@ -27,22 +27,11 @@ class FileStorage:
         """
         # If cls is not None, filter objects by class type
         if cls is not None:
-            # If cls is a string, convert it to a class object using getattr
-            if isinstance(cls, str):
-                cls = getattr(models, cls, None)
-
-            # If cls is not None after conversion, filter objects by cls type
-            if cls is not None:
-                return [
-                    obj for obj in self.__objects.values()
-                    if isinstance(obj, cls)
-                ]
-            else:
-                # If cls is None after conversion, return an empty dictionary
-                return []
-
-        # If cls is None, return list
-        return list(self.__objects.values())
+           return self.__objects.copy()
+        else:
+            return {key: obj
+                    for key, obj in self.__objects.items()
+                    if type(obj) is cls}
 
     def new(self, obj):
         """Adds new object to storage dictionary"""
@@ -89,7 +78,4 @@ class FileStorage:
         if obj is not None:
             # Create the key to locate the object in the storage dictionary
             key = f"{type(obj).__name__}.{obj.id}"
-            # Check if the key exists in the storage dictionary
-            if key in self.__objects:
-                # If the key exists, delete object from the storage dictionary
-                del self.__objects[key]
+            self.__objects.pop(key, None)
