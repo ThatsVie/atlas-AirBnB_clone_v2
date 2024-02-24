@@ -34,7 +34,7 @@ class FileStorage:
             # If cls is not None after conversion, filter objects by cls type
             if cls is not None:
                 return [
-                    obj for obj in self.__objects.items()
+                    obj for obj in self.__objects.values()
                     if isinstance(obj, cls)
                 ]
             else:
