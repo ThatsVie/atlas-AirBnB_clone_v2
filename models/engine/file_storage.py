@@ -33,7 +33,6 @@ class FileStorage:
         else:
             return self.__objects.copy()
 
-
     def new(self, obj):
         """Adds new object to storage dictionary"""
         if obj:
