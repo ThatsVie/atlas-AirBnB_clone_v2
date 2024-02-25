@@ -157,7 +157,8 @@ class HBNBCommand(cmd.Cmd):
 
         # Create a new instance of the class w/ new par.
         new_instance = self.classes[class_name](**parameters)
-        new_instance.save()  # Save the new instance
+        storage.new(new_instance)  # Add the new instance to the session
+        storage.save()  # Save the new instance
         print(new_instance.id)
 
     def help_create(self):
@@ -188,10 +189,11 @@ class HBNBCommand(cmd.Cmd):
             return
 
         key = c_name + "." + c_id
-        try:
-            print(storage._FileStorage__objects[key])
-        except KeyError:
+        obj = storage.get(c_name, c_id)
+        if not obj:
             print("** no instance found **")
+        else:
+            print(obj)
 
     def help_show(self):
         """ Help information for the show command """
@@ -240,12 +242,12 @@ class HBNBCommand(cmd.Cmd):
             if args not in HBNBCommand.classes:
                 print("** class doesn't exist **")
                 return
-            for k, v in storage._FileStorage__objects.items():
-                if k.split('.')[0] == args:
-                    print_list.append(str(v))
+            for obj in storage.all().values():
+                if obj.__class__.__name__ == args:
+                    print_list.append(str(obj))
         else:
-            for k, v in storage._FileStorage__objects.items():
-                print_list.append(str(v))
+            for obj in storage.all().values():
+                print_list.append(str(obj))
 
         print(print_list)
 
@@ -257,8 +259,8 @@ class HBNBCommand(cmd.Cmd):
     def do_count(self, args):
         """Count current number of class instances"""
         count = 0
-        for k, v in storage._FileStorage__objects.items():
-            if args == k.split('.')[0]:
+        for obj in storage.all().values():
+            if args == obj.__class__.__name__:
                 count += 1
         print(count)
 
@@ -268,7 +270,7 @@ class HBNBCommand(cmd.Cmd):
 
     def do_update(self, args):
         """ Updates a certain object with new info """
-        c_name = c_id = att_name = att_val = kwargs = ''
+        c_name, c_id, att_name, att_val, kwargs = '', '', '', '', {}
 
         # isolate cls from id/args, ex: (<cls>, delim, <id/args>)
         args = args.partition(" ")
@@ -300,10 +302,8 @@ class HBNBCommand(cmd.Cmd):
         # first determine if kwargs or args
         if '{' in args[2] and '}' in args[2] and type(eval(args[2])) is dict:
             kwargs = eval(args[2])
-            args = []  # reformat kwargs into list, ex: [<name>, <value>, ...]
             for k, v in kwargs.items():
-                args.append(k)
-                args.append(v)
+                setattr(storage.all()[key], k, v)
         else:  # isolate args
             args = args[2]
             if args and args[0] == '\"':  # check for quoted arg
@@ -324,30 +324,9 @@ class HBNBCommand(cmd.Cmd):
             if not att_val and args[2]:
                 att_val = args[2].partition(' ')[0]
 
-            args = [att_name, att_val]
+            setattr(storage.all()[key], att_name, att_val)
 
-        # retrieve dictionary of current objects
-        new_dict = storage.all()[key]
-
-        # iterate through attr names and values
-        for i, att_name in enumerate(args):
-            # block only runs on even iterations
-            if (i % 2 == 0):
-                att_val = args[i + 1]  # following item is value
-                if not att_name:  # check for att_name
-                    print("** attribute name missing **")
-                    return
-                if not att_val:  # check for att_value
-                    print("** value missing **")
-                    return
-                # type cast as necessary
-                if att_name in HBNBCommand.types:
-                    att_val = HBNBCommand.types[att_name](att_val)
-
-                # update dictionary with name, value pair
-                new_dict.__dict__.update({att_name: att_val})
-
-        new_dict.save()  # save updates to file
+        storage.save()  # save updates to file
 
     def help_update(self):
         """ Help information for the update class """

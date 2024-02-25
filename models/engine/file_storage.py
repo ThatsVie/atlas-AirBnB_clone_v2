@@ -27,11 +27,12 @@ class FileStorage:
         """
         # If cls is not None, filter objects by class type
         if cls is not None:
-           return self.__objects.copy()
-        else:
             return {key: obj
                     for key, obj in self.__objects.items()
-                    if type(obj) is cls}
+                    if cls is None or isinstance(obj, cls)}
+        else:
+            return self.__objects.copy()
+
 
     def new(self, obj):
         """Adds new object to storage dictionary"""
@@ -61,7 +62,8 @@ class FileStorage:
             with open(FileStorage.__file_path, 'r') as f:
                 temp = json.load(f)
                 for key, val in temp.items():
-                    self.all()[key] = classes[val['__class__']](**val)
+                    obj_class = classes.get(val['__class__'], BaseModel)
+                    self.all()[key] = obj_class(**val)
         except FileNotFoundError:
             pass
 
