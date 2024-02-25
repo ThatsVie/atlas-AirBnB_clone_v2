@@ -39,6 +39,11 @@ class FileStorage:
         if obj:
             key = "{}.{}".format(type(obj).__name__, obj.id)
             self.__objects[key] = obj
+            
+    def get(self, cls, id):
+        """Retrieve an object from the storage dictionary"""
+        key = "{}.{}".format(cls.__name__, id)
+        return self.__objects.get(key, None)
 
     def save(self):
         """Saves storage dictionary to file"""
