@@ -76,7 +76,7 @@ class test_basemodel(unittest.TestCase):
 
     def test_kwargs_one(self):
         """ """
-        n = {'Name': 'test'}
+        n = {'name': 'test'}
         with self.assertRaises(KeyError):
             new = self.value(**n)
 
@@ -94,6 +94,6 @@ class test_basemodel(unittest.TestCase):
         """ """
         new = self.value()
         self.assertEqual(type(new.updated_at), datetime.datetime)
-        n = new.to_dict()
-        new = BaseModel(**n)
-        self.assertFalse(new.created_at == new.updated_at)
+        old_updated_at = new.updated_at
+        new.save()
+        self.assertNotEqual(old_updated_at, new.updated_at)
