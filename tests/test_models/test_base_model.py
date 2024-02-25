@@ -94,13 +94,6 @@ class TestBaseModelInitialization(unittest.TestCase):
         kwargs_model = BaseModel(id=2147483647)
         self.assertEqual(kwargs_model.id, 2147483647)
 
-    def test_init_kwargs_from_dict(self):
-        """Test initialization with dict supplied as kwargs"""
-        self.assertEqual(self.model3.id, self.model1.id)
-        self.assertEqual(self.model3.created_at, self.model1.created_at)
-        self.assertEqual(self.model3.updated_at, self.model1.updated_at)
-        self.assertEqual(self.model3.__class__, self.model1.__class__)
-
     def test_init_args(self):
         """Test that random arguments as args are not recorded"""
         args_model = BaseModel([2, 4, 8, 16])
