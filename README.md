@@ -36,7 +36,7 @@ This repository contains the initial stage of a student project to build a clone
 <br>
 <center> <h2>General Use</h2> </center>
 
-1. The console can be ran by typing:
+1. The console can be ran by typing in the terminal:
  ```
 /AirBnB_clone$ ./console.py
  ```
