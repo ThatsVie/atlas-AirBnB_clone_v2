@@ -12,9 +12,14 @@
 edits and new additions by ✨ <a href="https://github.com/ThatsVie/">Vie</a> and  <a href="https://github.com/Srixx24/">Jackie</a> ✨
 </p>
 
+<br>
+
 This repository contains the initial stage of a student project to build a clone of the AirBnB website. This stage implements a backend interface, or console, to manage program data. Console commands allow the user to create, update, and destroy objects, as well as manage file storage. Using a system of JSON serialization/deserialization, storage is persistent between sessions.
 
-New additions were made to increase functionality of the consoles data storage and management. 
+<br>
+
+New additions were made to increase functionality of the consoles data storage and management. SQLAlchemy was used in our storage engine to help streamline this process. 
+
 
 
 ---
