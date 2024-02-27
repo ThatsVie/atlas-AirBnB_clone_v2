@@ -20,6 +20,9 @@ This repository contains the initial stages of our student project to build a cl
 
 New additions were made to increase functionality of the consoles data storage and management. SQLAlchemy was used in our storage engine to help streamline this process. 
 
+<br>
+
+Lastly we used a Many-to-Many relationship to link an amenity to multiple places and so a place can have multiple amenities. This feature helps reduce the overall code size, helps with code flexibility, and enables efficient querying of related data.
 
 
 ---
