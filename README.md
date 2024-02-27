@@ -14,6 +14,8 @@ edits and new additions by ✨ <a href="https://github.com/ThatsVie/">Vie</a> an
 
 This repository contains the initial stage of a student project to build a clone of the AirBnB website. This stage implements a backend interface, or console, to manage program data. Console commands allow the user to create, update, and destroy objects, as well as manage file storage. Using a system of JSON serialization/deserialization, storage is persistent between sessions.
 
+New additions were made to increase functionality of the consoles data storage and management. 
+
 
 ---
 
