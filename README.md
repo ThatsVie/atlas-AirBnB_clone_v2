@@ -1,5 +1,6 @@
-This line exists as evidence of update README.md. More to follow.
-<center> <h1>HBNB - The Console</h1> </center>
+
+![AirBnB_clone_v2](https://github.com/ThatsVie/atlas-AirBnB_clone_v2/assets/144152489/fea4e1cb-eb30-4e4b-bafa-d59aa67d6e52)
+
 
 This repository contains the initial stage of a student project to build a clone of the AirBnB website. This stage implements a backend interface, or console, to manage program data. Console commands allow the user to create, update, and destroy objects, as well as manage file storage. Using a system of JSON serialization/deserialization, storage is persistent between sessions.
 
