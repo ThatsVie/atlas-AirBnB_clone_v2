@@ -23,8 +23,6 @@ New additions were made to increase functionality of the consoles data storage a
 <br>
 
 Lastly we used a Many-to-Many relationship to link an amenity to multiple places and so a place can have multiple amenities. This feature helps reduce the overall code size, helps with code flexibility, and enables efficient querying of related data.
----
-
 
 ---
 <center> <h3>General Use</h3> </center>
@@ -101,3 +99,6 @@ Usage: destroy <class_name> <_id>
 ** no instance found **
 (hbnb)   
 ```
+---
+All testing, files, and code works as intended. All checks green with the single execption of "Can list all City in MySQL (created outside the program)"
+check (worth 1 point). 
