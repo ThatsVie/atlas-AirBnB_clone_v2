@@ -100,5 +100,10 @@ Usage: destroy <class_name> <_id>
 (hbnb)   
 ```
 ---
-All testing, files, and code works as intended. All checks green with the single execption of "Can list all City in MySQL (created outside the program)"
+
+<p align="center">
+  <img width="350" src="https://github.com/ThatsVie/atlas-AirBnB_clone_v2/assets/144152489/4f106fa6-839e-4ccc-b4db-ad4f14f76c26">
+</p>
+
+All testing, files, and code works as intended. All checks green with the single exception of "Can list all City in MySQL (created outside the program)"
 check (worth 1 point). 
