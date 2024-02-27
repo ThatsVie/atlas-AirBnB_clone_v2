@@ -7,10 +7,10 @@
 ![Static Badge](https://img.shields.io/badge/Queers%20Ruling-Code%20Space-purple?style=string&logoColor=purple) 
 ![MySQL](https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white)
 
-<p align="center">
+<h3><p align="center">
 	Original repo forked from this <a href="https://github.com/justinmajetich/AirBnB_clone">codebase</a>,
 edits and new additions by ✨ <a href="https://github.com/ThatsVie/">Vie</a> and  <a href="https://github.com/Srixx24/">Jackie</a> ✨
-</p>
+</h3></p>
 
 <br>
 
