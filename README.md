@@ -7,7 +7,10 @@
 ![Static Badge](https://img.shields.io/badge/Queers%20Ruling-Code%20Space-purple?style=string&logoColor=purple) 
 ![MySQL](https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white)
 
-
+<p align="center">
+	Original repo forked from this <a href="https://github.com/justinmajetich/AirBnB_clone">codebase</a>,
+edits and new additions by ✨ <a href="https://github.com/ThatsVie/">Vie</a> and  <a href="https://github.com/Srixx24/">Jackie</a> ✨
+</p>
 
 This repository contains the initial stage of a student project to build a clone of the AirBnB website. This stage implements a backend interface, or console, to manage program data. Console commands allow the user to create, update, and destroy objects, as well as manage file storage. Using a system of JSON serialization/deserialization, storage is persistent between sessions.
 
