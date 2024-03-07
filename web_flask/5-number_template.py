@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
 Starts a Flask web application listening on port 5000.
-Defines a Flask application with five routes:
+Defines a Flask application with six routes:
 - "/" displays "Hello HBNB!"
 - "/hbnb" displays "HBNB"
 - "/c/<text>" displays "C " followed by the value of the
@@ -9,6 +9,8 @@ text variable, replacing underscores with spaces.
 - "/python/<text>" displays "Python ",
 followed by the value of the text variable
 - "/number/<n>" displays "<n> is a number" only if n is an integer
+- "/number_template/<n>" displays an HTML page only if n is an integer.
+The page contains an H1 tag with "Number: n" inside the body tag.
 """
 from flask import Flask
 
@@ -66,6 +68,17 @@ def number_route(n):
     - n: integer variable from the URL path.
     """
     return '{} is a number'.format(n)
+
+@app.route('/number_template/<int:n>', strict_slashes=False)
+def number_template(n):
+    """
+    Displays an HTML page with "Number: n" inside an H1 tag in the body,
+    only if n is an integer.
+
+    Args:
+    - n: integer variable from the URL path.
+    """
+    return render_template('5-number.html', n=n)
 
 
 if __name__ == '__main__':
