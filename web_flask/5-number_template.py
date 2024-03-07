@@ -13,6 +13,7 @@ followed by the value of the text variable
 The page contains an H1 tag with "Number: n" inside the body tag.
 """
 from flask import Flask
+from flask import render_template
 
 app = Flask(__name__)
 
