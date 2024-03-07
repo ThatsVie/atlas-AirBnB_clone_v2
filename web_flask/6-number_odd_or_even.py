@@ -99,6 +99,5 @@ def number_odd_or_even(n):
                          n=n, odd_or_even=odd_or_even
 
 
-
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
