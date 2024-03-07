@@ -4,7 +4,7 @@ Starts a Flask web application listening on port 5000.
 Defines a Flask application with three routes
 "/" displays "Hello HBNB!"
 "/hbnb" displays "HBNB"
-"/c/<text>" displays "C " followed by the value of the 
+"/c/<text>" displays "C " followed by the value of the
 text variable, replacing underscores with spaces.
 """
 from flask import Flask
