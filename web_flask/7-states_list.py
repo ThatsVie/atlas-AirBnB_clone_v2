@@ -15,7 +15,8 @@ The page contains an H1 tag with "Number: n" inside the body tag.
 The page contains an H1 tag with Number: n is even|odd if n is an integer
 - /states_list displays a list of all State objects sorted by name
 H1 tag: "States"
-UL tag: with the list of all State objects present in DBStorage sorted by name (A->Z)
+UL tag: with the list of all State objects present in DBStorage
+sorted by name (A->Z)
 LI tag: description of one State: <state.id>: <B><state.name></B>
 """
 from flask import Flask
@@ -102,6 +103,23 @@ def number_odd_or_even(n):
     odd_or_even = 'even' if n % 2 == 0 else 'odd'
     return render_template('6-number_odd_or_even.html',
                            n=n, odd_or_even=odd_or_even)
+
+
+@app.route('/states_list', strict_slashes=False)
+def state_list():
+    """
+    Displays a list of states.
+    """
+    states = storage.all('State')
+    return render_template('7-states_list.html', states=states)
+
+
+@app.teardown_appcontext
+def teardown(exception):
+    """
+    Removes the current SQLAlchemy Session.
+    """
+    storage.close()
 
 
 if __name__ == '__main__':
