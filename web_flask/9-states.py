@@ -10,22 +10,11 @@ text variable, replacing underscores with spaces.
 followed by the value of the text variable
 - "/number/<n>" displays "<n> is a number" only if n is an integer
 - "/number_template/<n>" displays an HTML page only if n is an integer.
-The page contains an H1 tag with "Number: n" inside the body tag.
 - /number_odd_or_even/<n>: display a HTML page only if n is an integer
-The page contains an H1 tag with Number: n is even|odd if n is an integer
 - /states_list displays a list of all State objects sorted by name
-H1 tag: "States"
-UL tag: with the list of all State objects present in DBStorage
-sorted by name (A->Z)
-LI tag: description of one State: <state.id>: <B><state.name></B>
 - /cities_by_states: display a HTML page: (inside the tag BODY)
-H1 tag: “States”
-UL tag: with the list of all State objects present in DBStorage
-sorted by name (A->Z)
-LI tag: description of one State: <state.id>: <B><state.name></B> + 
-UL tag: with the list of City objects linked to the State sorted by name (A->Z)
-LI tag: description of one City: <city.id>: <B><city.name></B>
--
+- /states: display a HTML page: (inside the tag BODY)
+- /states/<id>: display a HTML page: (inside the tag BODY)
 """
 from flask import Flask
 from flask import render_template
@@ -130,6 +119,25 @@ def cities_by_states():
     states = storage.all('State')
     return render_template('8-cities_by_states.html', states=states)
 
+
+@app.route('/states', strict_slashes=False)
+def states():
+    """
+    Display a list of all State objects
+    """
+    states = storage.all('State')
+    return render_template('8-cities_by_states.html', states=states)
+
+
+@app.route('/states/<id>', strict_slashes=False)
+def states_id(id):
+    """
+    Display the cities associated with a specific State.
+    """
+    for state in storage.all('State').values():
+        if state.id == id:
+            return render_template('9-states.html', state=state)
+    return render_template('9-states.html')
 
 
 @app.teardown_appcontext
