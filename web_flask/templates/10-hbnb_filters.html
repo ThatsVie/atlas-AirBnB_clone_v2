@@ -1,46 +1,72 @@
 <!DOCTYPE HTML>
-<HTML lang="en">
+<HTML lang="en" dir="ltr">
     <HEAD>
+        
+        <!-- Meta tags for character set and viewport -->
+        <META charset="UTF-8"> 
+        <META name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
         <TITLE>AirBnB clone</TITLE>
-        <LINK rel="shortcut icon" href="../static/images/icon.png" >
+        
+        <!-- CSS links for styling -->
         <LINK rel="stylesheet" href="../static/styles/4-common.css"/>
         <LINK rel="stylesheet" href="../static/styles/3-header.css"/>
         <LINK rel="stylesheet" href="../static/styles/3-footer.css"/>
         <LINK rel="stylesheet" href="../static/styles/6-filters.css"/>
+        
+        <!-- Shortcut icon -->
+        <LINK rel="shortcut icon" href="../static/images/icon.png" >
     </HEAD>
     <BODY>
         <HEADER>
-            <DIV id="header_logo"></DIV>
+            
+            <!-- Header logo -->
+            <DIV class="header-logo"></DIV>
         </HEADER>
         <DIV class="container">
             <SECTION class="filters">
+                
+                <!-- Search button -->
                 <BUTTON>Search</BUTTON>
+                
+                <!-- Locations section -->
                 <DIV class="locations">
                     <H3>States</H3>
                     <H4>&nbsp;</H4>
-                    <UL class="popover">
-                        {% for state in states | sort(attribute='name') %}
-                        <LI><H2>{{state.name}}</H2>
-                            <UL>
-                                {% for city in state.cities | sort(attribute='name') %}
-                                <LI><H4>{{city.name}}</H4></LI>
-                                {% endfor %}
-                            </UL>
-                        </LI>
-                        {% endfor %}
-                    </UL>
+                    <DIV>
+                        <UL class="popover">
+                            
+                            <!-- Loop through states -->
+                            {% for state in states | sort(attribute='name') %}
+                            <LI><H2>{{ state.name }}</H2>
+                                <UL>
+                                    
+                                    <!-- Loop through cities -->
+                                    {% for city in state.cities | sort(attribute='name') %}
+                                    <LI><H4>{{ city.name }}</H4></LI>
+                                    {% endfor %}
+                                </UL>
+                            </LI>
+                            {% endfor %}
+                        </UL>
+                    </DIV>
                 </DIV>
+                
+                <!-- Amenities section -->
                 <DIV class="amenities">
                     <H3>Amenities</H3>
                     <H4>&nbsp;</H4>
                     <UL class="popover">
-                        {% for amenity in amenities %}
-                        <LI><H4>{{amenity.name}}</H4></LI>
+                        
+                        <!-- Loop through amenities -->
+                        {% for amenity in amenities | sort(attribute="name") %}
+                        <LI><H4>{{ amenity.name }}</H4></LI>
                         {% endfor %}
                     </UL>
                 </DIV>
             </SECTION>
         </DIV>
+        
+        <!-- Footer -->
         <FOOTER>
             <P>Holberton School</P>
         </FOOTER>
