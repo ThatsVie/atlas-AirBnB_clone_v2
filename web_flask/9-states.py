@@ -16,6 +16,10 @@ followed by the value of the text variable
 - /states: display a HTML page: (inside the tag BODY)
 - /states/<id>: display a HTML page: (inside the tag BODY)
 """
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+
 from flask import Flask
 from flask import render_template
 from models import storage
