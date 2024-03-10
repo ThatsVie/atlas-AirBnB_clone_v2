@@ -1,13 +1,14 @@
+/* Styling for the body element */
 body {
-	margin:0px;
-	padding:0px;
-
-	color: #484848;
-	font-size: 14px;
-	font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    font-color: #484848; /* Set the font color to a dark gray */
+    font-size: 14px; /* Set the font size to 14 pixels */
+    font-family: Circular, "Helvetica Neue", Helvetica, Arial, sans-serif; /* Specify the font family */
 }
 
+/* Styling for the container element */
 .container {
-    max-width: 1000px;
-    margin: 30px auto;
+    max-width: 1000px; /* Set the maximum width of the container to 1000 pixels */
+    margin: 30px auto; /* Center the container horizontally with a top margin of 30 pixels */
 }
