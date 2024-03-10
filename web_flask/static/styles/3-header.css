@@ -1,18 +1,15 @@
+/* Styling for the header section */
 header {
-	background-color: white;
-	height: 70px;
-	width: 100%;
-	
-	border-bottom: 1px solid #CCCCCC;
+    height: 70px; /* Set the height of the header */
+    width: 100%; /* Make the header span the entire width of the viewport */
+    border-bottom: 1px solid #CCCCCC; /* Add a bottom border with a light gray color */
 }
 
-#header_logo {
-	height: 100%;
-	width: 142px;
-
-	background-image: url("../images/logo.png");
-	background-repeat: no-repeat;
-	background-position: center;
-
-	margin-left: 20px;
+/* Styling for the logo */
+.logo {
+    background-image: url("./images/logo.png"); /* Set the logo image */
+    background-position: 20px; /* Position the logo image */
+    vertical-align: middle; /* Align the logo vertically */
+    height: 100%; /* Set the height of the logo */
+    background-repeat: no-repeat; /* Prevent the logo from repeating */
 }
