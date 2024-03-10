@@ -2,10 +2,6 @@
 """
 Starts a Flask web application listening on port 5000.
 - /states_list displays a list of all State objects sorted by name
-H1 tag: "States"
-UL tag: with the list of all State objects present in DBStorage
-sorted by name (A->Z)
-LI tag: description of one State: <state.id>: <B><state.name></B>
 """
 import sys
 import os
