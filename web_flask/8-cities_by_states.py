@@ -6,12 +6,11 @@ H1 tag: “States”
 UL tag: with the list of all State objects present in DBStorage
 sorted by name (A->Z)
 LI tag: description of one State: <state.id>: <B><state.name></B> + 
-UL tag: with the list of City objects linked to the State sorted by name (A->Z)
+UL tag: with the list of City objects linked to the State sorted by name
 LI tag: description of one City: <city.id>: <B><city.name></B>
 """
 import sys
 import os
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
 from flask import Flask
 from flask import render_template
