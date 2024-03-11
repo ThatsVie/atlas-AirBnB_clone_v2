@@ -1,87 +1,112 @@
 /* Styling for the filters section */
 .filters {
-    background-color: white; /* Background color */
-    height: 70px; /* Height of the filters section */
-    width: 100%; /* Full width */
-    border: 1px solid #DDDDDD; /* Border with a light gray color */
-    border-radius: 4px; /* Rounded corners */
-    display: flex; /* Flex layout */
-    align-items: center; /* Center align items vertically */
-}
-
-/* Styling for the search button */
-.filters button {
-    font-size: 18px; /* Font size */
-    background-color: #FF5A5F; /* Background color */
-    color: #FFFFFF; /* Text color */
-    height: 48px; /* Height of the button */
-    width: 20%; /* Width of the button */
-    border: none; /* No border */
-    border-radius: 4px; /* Rounded corners */
-    margin-right: 30px; /* Margin on the right */
-    margin-left: auto; /* Auto margin on the left */
-}
-
-/* Styling for the search button on hover */
-.filters button:hover {
-    opacity: 90%; /* Reduced opacity on hover */
+	display: block; /* Display as block element */
+	background-color: white; /* White background */
+	height: 70px; /* Height of 70 pixels */
+	width: 100%; /* Full width */
+	border: 1px solid #DDDDDD; /* Border with light gray color */
+	border-radius: 4px; /* Rounded corners */
 }
 
 /* Styling for the locations section */
-.filters .locations {
-    height: 100%; /* Full height of the locations section */
-    width: 25%; /* 25% width of the filters section */
-    border-right: 1px solid #DDDDDD; /* Right border with light gray color */
+.locations {
+	display: inline; /* Display as inline element */
+	vertical-align: middle; /* Align vertically to the middle */
+	float: left; /* Float to the left */
+	height: 100%; /* Full height */
+	width: 25%; /* 25% width */
+
+	line-height: 20px; /* Line height of 20 pixels */
+	border-right: 1px solid #DDDDDD; /* Right border with light gray color */
 }
 
 /* Styling for the amenities section */
-.filters .amenities {
-    height: 100%; /* Full height of the amenities section */
-    width: 25%; /* 25% width of the filters section */
-}
+.amenities {
+	display: inline; /* Display as inline element */
+	vertical-align: middle; /* Align vertically to the middle */
+	height: 100%; /* Full height */
+	float: left; /* Float to the left */
+	width: 25%; /* 25% width */
 
-/* Styling for the popover unordered list */
-.popover ul {
-    list-style-type: none; /* No bullet points */
-}
-
-/* Styling for list items inside amenities popover */
-.amenities .popover li {
-    padding-top: 5px; /* Top padding for list items */
+	line-height: 20px; /* Line height of 20 pixels */
 }
 
 /* Styling for the popover */
 .popover {
-    display: none; /* Initially hidden */
-    position: relative; /* Relative positioning */
-    background-color: #FFFFFF; /* Background color */
-    border: 1px solid #DDDDDD; /* Border with light gray color */
-    border-radius: 4px; /* Rounded corners */
-    padding: 10px; /* Padding inside popover */
+	list-style-type: none; /* No bullet points */
+	display: none; /* Initially hidden */
+	background-color: #FAFAFA; /* Background color */
+	width: 100%; /* Full width */
+
+	margin-left: -1px; /* Adjusting margin */
+	margin-top: 8px; /* Adjusting margin */
+	padding: 25px 0px; /* Padding */
+
+	border: 1px solid #DDDDDD; /* Border with light gray color */
+	border-radius: 4px; /* Rounded corners */
+	max-height: 300px; /* Maximum height */
+	overflow-y: auto; /* Enable vertical scroll if needed */
 }
 
-/* Displaying popover on hover for locations and amenities */
-.locations:hover .popover,
+/* Displaying popover on hover for locations */
+.locations:hover .popover {
+	display: inline-block; /* Display as inline-block element */
+}
+
+/* Displaying popover on hover for amenities */
 .amenities:hover .popover {
-    display: block; /* Displaying popover on hover */
+	display: inline-block; /* Display as inline-block element */
+}
+
+/* Styling for unordered lists */
+ul {
+	list-style-type: none; /* No bullet points */
+	padding: 0px; /* No padding */
+	padding-bottom: 20px; /* Bottom padding */
 }
 
 /* Styling for heading level 2 */
 h2 {
-    font-size: 16px; /* Font size */
+	font-size: 16px; /* Font size */
+	padding-left: 30px; /* Left padding */
+	margin: 0px; /* No margin */
 }
 
 /* Styling for heading level 3 */
 h3 {
-    font-weight: 600; /* Font weight */
-    margin-left: 60px; /* Left margin */
-    margin-top: 15px; /* Top margin */
+	font-weight: 600; /* Font weight */
+	margin-top: 12px; /* Top margin */
+	margin-bottom: 5px; /* Bottom margin */
+	padding-left: 45px; /* Left padding */
 }
 
 /* Styling for heading level 4 */
 h4 {
-    font-weight: 400; /* Font weight */
-    font-size: 14px; /* Font size */
-    margin-left: 60px; /* Left margin */
-    margin-top: -15px; /* Top margin */
+	font-size: 14px; /* Font size */
+	font-weight: 400; /* Font weight */
+	margin-top: 5px; /* Top margin */
+	margin-bottom: 5px; /* Bottom margin */
+	padding-left: 45px; /* Left padding */
+}
+
+/* Styling for buttons */
+button {
+	color: #FFFFFF; /* Text color */
+	font-size: 18px; /* Font size */
+	
+	height: 48px; /* Height of 48 pixels */
+	width: 20%; /* 20% width */
+	background-color: #FF5A5F; /* Background color */
+	border-style: none; /* No border */
+	border-radius: 4px; /* Rounded corners */
+
+	float: right; /* Float to the right */
+	margin-top: 11px; /* Top margin */
+	margin-bottom: 11px; /* Bottom margin */
+	margin-right: 30px; /* Right margin */
+}
+
+/* Styling for buttons on hover */
+button:hover {
+	opacity: 90%; /* Reduced opacity on hover */
 }
