@@ -1,19 +1,11 @@
-/* Styling for the footer */
-footer 
-{
-    background-color: white; /* Setting background color to white */
-    height: 60px; /* Setting height to 60 pixels */
-    width: 100%; /* Setting width to 100% */
-    display: flex; /* Using flexbox for layout */
-    justify-content: center; /* Centering content horizontally */
-    align-items: center; /* Centering content vertically */
-    bottom: 0; /* Positioning at the bottom of the viewport */
-    border-top: 1px solid #CCCCCC; /* Adding a 1px solid border on top with color silver */
-}
-
-/* Styling for paragraphs inside the footer */
-footer p 
-{
-    margin: 0; /* Removing margin */
-    text-align: center; /* Centering text */
+/* Styling for the footer section */
+footer {
+	position: fixed; /* Fixed position */
+	bottom: 0; /* Positioned at the bottom */
+	background-color: white; /* White background */
+	height: 60px; /* Height of 60 pixels */
+	width: 100%; /* Full width */
+	text-align: center; /* Center align text */
+	line-height: 30px; /* Line height of 30 pixels */
+	border-top: 1px solid #CCCCCC; /* Top border with light gray color */
 }
