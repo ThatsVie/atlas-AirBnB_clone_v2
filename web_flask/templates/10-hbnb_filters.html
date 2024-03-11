@@ -22,11 +22,10 @@
             <!-- Header logo -->
             <DIV class="header-logo"></DIV>
         </HEADER>
+        
+        <!-- Filter Section -->
         <DIV class="container">
             <SECTION class="filters">
-                
-                <!-- Search button -->
-                <BUTTON>Search</BUTTON>
                 
                 <!-- Locations section -->
                 <DIV class="locations">
@@ -55,6 +54,7 @@
                 <DIV class="amenities">
                     <H3>Amenities</H3>
                     <H4>&nbsp;</H4>
+                    <DIV>
                     <UL class="popover">
                         
                         <!-- Loop through amenities -->
@@ -63,6 +63,11 @@
                         {% endfor %}
                     </UL>
                 </DIV>
+                </DIV>
+
+                <!-- Search Button -->
+                <BUTTON>Search</BUTTON>
+                
             </SECTION>
         </DIV>
         
