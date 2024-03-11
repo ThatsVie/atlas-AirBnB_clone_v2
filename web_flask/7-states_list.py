@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+
 """
 Starts a Flask web application listening on port 5000.
 - /states_list displays a list of all State objects sorted by name
