@@ -9,11 +9,7 @@ LI tag: description of one State: <state.id>: <B><state.name></B> +
 UL tag: with the list of City objects linked to the State sorted by name
 LI tag: description of one City: <city.id>: <B><city.name></B>
 """
-import sys
-import os
-
-from flask import Flask
-from flask import render_template
+from flask import Flask, render_template
 from models import storage
 
 app = Flask(__name__)
