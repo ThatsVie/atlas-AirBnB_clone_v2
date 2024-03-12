@@ -111,7 +111,7 @@ def state_list():
     """
     Displays a list of states.
     """
-    states = storage.all('State')
+    states = storage.all(State)
     return render_template('7-states_list.html', states=states)
 
 
@@ -120,7 +120,7 @@ def cities_by_states():
     """
     Display a list of states and their associated cities
     """
-    states = storage.all('State')
+    states = storage.all(State)
     return render_template('8-cities_by_states.html', states=states)
 
 
@@ -129,7 +129,7 @@ def states():
     """
     Display a list of all State objects
     """
-    states = storage.all('State')
+    states = storage.all(State)
     return render_template('8-cities_by_states.html', states=states)
 
 
