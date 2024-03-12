@@ -124,15 +124,24 @@ def cities_by_states():
 
 
 @app.route('/states', strict_slashes=False)
+def states();
+    """
+    Displays list of states
+    """
+    states = storage.all('State')
+    return render_template('8-cities_by_states.html', states=states)
+
+
 @app.route('/states/<id>', strict_slashes=False)
-def display_states(id=None):
+def states_id(id):
     """
-    Display the cities associated with a specific State.
+    Display cities with state id
     """
-    states = storage.all(State)
-    sorted_states = sorted(states.values(), key=lambda state: state.name)
-    return render_template("9-states.html", states=states_sorted, id=id)
-    
+    for state in storage.all('State').values():
+        if state.id == id:
+            return render_template('9-states.html', state=state)
+    return render_template('9-states.html')
+
 
 @app.teardown_appcontext
 def teardown(exception):
