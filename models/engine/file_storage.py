@@ -85,7 +85,8 @@ class FileStorage:
             # Create the key to locate the object in the storage dictionary
             key = f"{type(obj).__name__}.{obj.id}"
             self.__objects.pop(key, None)
-            
+
+
     def close(self):
         """
         close method
