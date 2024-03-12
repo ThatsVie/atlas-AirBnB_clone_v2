@@ -21,7 +21,8 @@ def cities_by_states():
     """
     Display a list of states and their associated cities
     """
-    states = storage.all('State')
+    states_dict = storage.all(State)
+    states = {state_id: state for state_id, state in states_dict.items()}
     return render_template('8-cities_by_states.html', states=states)
 
 
