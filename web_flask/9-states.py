@@ -137,14 +137,12 @@ def states_id(id):
     """
     Display cities with state id
     """
-    state = storage.get('State', id)
-    if state:
-        return render_template('9-states.html', state=state)
+    for state in storage.all('State').values():
+        if state.id == id:
+            return render_template('9-states.html', state=state)
     return render_template('9-states.html')
 
     
-
-
 @app.teardown_appcontext
 def teardown(exception):
     """
