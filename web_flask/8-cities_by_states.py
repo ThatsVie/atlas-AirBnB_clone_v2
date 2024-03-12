@@ -21,9 +21,8 @@ def cities_by_states():
     """
     Display a list of states and their associated cities
     """
-    states = storage.all(State)
-    sorted_states = sorted(states.values(), key=lambda x: x.name)
-    return render_template('8-cities_by_states.html', states=sorted_states)
+    states = storage.all('State')
+    return render_template('8-cities_by_states.html', states=states)
 
 
 @app.teardown_appcontext
