@@ -23,7 +23,12 @@ def cities_by_states():
     """
     states_dict = storage.all(State)
     states = {state_id: state for state_id, state in states_dict.items()}
-    return render_template('8-cities_by_states.html', states=states)
+    # Sort states by name
+    sorted_states = sorted(states.values(), key=lambda x: x.name)
+    # Sort cities within each state by name
+    for state in sorted_states:
+        state.cities.sort(key=lambda x: x.name)
+    return render_template('8-cities_by_states.html', states=sorted_states)
 
 
 @app.teardown_appcontext
@@ -36,3 +41,4 @@ def teardown(exception):
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
+
