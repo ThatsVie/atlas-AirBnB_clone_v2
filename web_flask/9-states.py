@@ -124,23 +124,17 @@ def cities_by_states():
 
 
 @app.route('/states', strict_slashes=False)
-def states():
+@app.route('/states/<id>', strict_slashes=False)
+def states(id=None):
     """
-    Displays list of states
+    Displays list of states or cities associated with a specific state.
     """
     states = storage.all('State')
-    return render_template('8-cities_by_states.html', states=states)
-
-
-@app.route('/states/<id>', strict_slashes=False)
-def states_id(id):
-    """
-    Display cities with state id
-    """
-    for state in storage.all('State').values():
-        if state.id == id:
+    if id:
+        state = states.get(id)
+        if state:
             return render_template('9-states.html', state=state)
-    return render_template('9-states.html')
+    return render_template('9-states.html', states=states)
 
     
 @app.teardown_appcontext
