@@ -11,6 +11,7 @@ LI tag: description of one City: <city.id>: <B><city.name></B>
 """
 from flask import Flask, render_template
 from models import storage
+from models.state import State
 
 app = Flask(__name__)
 
@@ -20,8 +21,9 @@ def cities_by_states():
     """
     Display a list of states and their associated cities
     """
-    states = storage.all('State')
-    return render_template('8-cities_by_states.html', states=states)
+    states = storage.all(State)
+    sorted_states = sorted(states.values(), key=lambda x: x.name)
+    return render_template('8-cities_by_states.html', states=sorted_states)
 
 
 @app.teardown_appcontext
