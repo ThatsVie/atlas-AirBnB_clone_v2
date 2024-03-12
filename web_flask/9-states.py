@@ -20,8 +20,7 @@ import sys
 import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
-from flask import Flask
-from flask import render_template
+from flask import Flask, render_template
 from models import storage
 
 app = Flask(__name__)
@@ -130,7 +129,7 @@ def states():
     Display a list of all State objects
     """
     states = storage.all('State')
-    return render_template('8-cities_by_states.html', states=states)
+    return render_template('9-states.html', states=states)
 
 
 @app.route('/states/<id>', strict_slashes=False)
@@ -138,10 +137,11 @@ def states_id(id):
     """
     Display the cities associated with a specific State.
     """
-    for state in storage.all('State').values():
-        if state.id == id:
-            return render_template('9-states.html', state=state)
-    return render_template('9-states.html')
+    state = storage.get('State', id)
+    if state:
+        return render_template('9-states.html', state=state)
+    else:
+        return render_template('9-states.html', state=None)
 
 
 @app.teardown_appcontext
