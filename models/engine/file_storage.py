@@ -86,7 +86,6 @@ class FileStorage:
             key = f"{type(obj).__name__}.{obj.id}"
             self.__objects.pop(key, None)
 
-
     def close(self):
         """
         close method
