@@ -1,7 +1,4 @@
 #!/usr/bin/python3
-import sys
-import os
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 """
 Starts a Flask web application listening on port 5000.
 - /cities_by_states: display a HTML page: (inside the tag BODY)
@@ -12,6 +9,10 @@ LI tag: description of one State: <state.id>: <B><state.name></B> +
 UL tag: with the list of City objects linked to the State sorted by name
 LI tag: description of one City: <city.id>: <B><city.name></B>
 """
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+
 from flask import Flask, render_template
 from models import storage
 from models.state import State
