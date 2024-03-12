@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 """
 Starts a Flask web application listening on port 5000.
 - /cities_by_states: display a HTML page: (inside the tag BODY)
