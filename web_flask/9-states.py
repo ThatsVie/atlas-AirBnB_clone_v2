@@ -124,7 +124,7 @@ def cities_by_states():
 
 
 @app.route('/states', strict_slashes=False)
-def states();
+def states():
     """
     Displays list of states
     """
