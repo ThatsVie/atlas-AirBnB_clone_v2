@@ -139,7 +139,7 @@ def states_id(id):
     Display the cities associated with a specific State.
     """
     states = storage.all(State)
-    eturn render_template("9-states.html", states=states)
+    return render_template("9-states.html", states=states)
 
 
 @app.teardown_appcontext
