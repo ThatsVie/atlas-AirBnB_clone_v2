@@ -289,10 +289,78 @@ http://localhost:5000/number_template/python
 **After executing the task, the Flask web application will start running and listening for incoming requests on the specified address and port. To stop the server and return to the command line prompt, you need to press CTRL+C. This key combination sends a KeyboardInterrupt signal to the running process, prompting it to shut down gracefully. It's important to use this method to terminate the server properly and avoid leaving any lingering processes running in the background.**
 
 ### Task 6
+Navigate back to your original terminal. Press CTRL+C to end the previous process if you havent already.
+Input this command to executes the Python module web_flask.6-number_odd_or_even using Python 3
+```bash
+python3 -m web_flask.6-number_odd_or_even
+```
+![Screenshot 2024-03-13 094001](https://github.com/ThatsVie/atlas-AirBnB_clone_v2/assets/143755961/60ef577b-7bad-499a-8878-63554325608d)
 
+Open another tab in your terminal:
+```bash
+curl 0.0.0.0:5000/number_odd_or_even/89 ; echo ""
+```
+![Screenshot 2024-03-13 094050](https://github.com/ThatsVie/atlas-AirBnB_clone_v2/assets/143755961/8b3325a7-e6f6-4f1d-a886-22d9d86feec3)
+
+In your browser:
+```bash
+http://localhost:5000/number_odd_or_even/89
+```
+![Screenshot 2024-03-13 094302](https://github.com/ThatsVie/atlas-AirBnB_clone_v2/assets/143755961/d8016014-e807-46f7-bfa6-d0bc6b31e2d4)
+
+Back in your terminal:
+```bash
+curl 0.0.0.0:5000/number_odd_or_even/32 ; echo ""
+```
+![Screenshot 2024-03-13 094404](https://github.com/ThatsVie/atlas-AirBnB_clone_v2/assets/143755961/2974bbc8-653b-4036-9485-11779c800bfd)
+
+In your browser:
+```bash
+http://localhost:5000/number_odd_or_even/32
+```
+
+![Screenshot 2024-03-13 094511](https://github.com/ThatsVie/atlas-AirBnB_clone_v2/assets/143755961/40eec025-c0a9-4cc3-acf4-08334df696ac)
+
+
+Back in your terminal:
+```bash
+curl 0.0.0.0:5000/number_odd_or_even/python
+```
+![Screenshot 2024-03-13 094633](https://github.com/ThatsVie/atlas-AirBnB_clone_v2/assets/143755961/1f70c4bc-7303-4017-8634-fd72ef4e9e6b)
+
+In your browser:
+```bash
+http://localhost:5000/number_odd_or_even/python
+```
+![Screenshot 2024-03-13 094719](https://github.com/ThatsVie/atlas-AirBnB_clone_v2/assets/143755961/51d8fd64-d769-45be-a5c2-e366a82b7727)
+
+**After executing the task, the Flask web application will start running and listening for incoming requests on the specified address and port. To stop the server and return to the command line prompt, you need to press CTRL+C. This key combination sends a KeyboardInterrupt signal to the running process, prompting it to shut down gracefully. It's important to use this method to terminate the server properly and avoid leaving any lingering processes running in the background.**
 
 ### Task 8
+Navigate back to your original terminal. Press CTRL+C to end the previous process if you havent already.
+Run this command to concatenate data to work with
+```bash
+cat 100-hbnb.sql | mysql -uroot -p
+```
+Then:
+```bash
+HBNB_MYSQL_USER=hbnb_dev HBNB_MYSQL_PWD=hbnb_dev_pwd HBNB_MYSQL_HOST=localhost HBNB_MYSQL_DB=hbnb_dev_db HBNB_TYPE_STORAGE=db python3 -m web_flask.7-states_list
+```
+![Screenshot 2024-03-13 095111](https://github.com/ThatsVie/atlas-AirBnB_clone_v2/assets/143755961/e170b50c-099e-4098-a1bf-ce341742c452)
 
+Open another tab in your terminal and input this command
+```bash
+curl 0.0.0.0:5000/states_list ; echo ""
+```
+![Screenshot 2024-03-13 095305](https://github.com/ThatsVie/atlas-AirBnB_clone_v2/assets/143755961/a9c0cb34-bfdc-468f-9fe8-4a878a8bac43)
+
+In your browser:
+```bash
+http://localhost:5000/states_list
+```
+![Screenshot 2024-03-13 095402](https://github.com/ThatsVie/atlas-AirBnB_clone_v2/assets/143755961/d9642a57-b82f-4fe5-a082-ed625ee74608)
+
+**After executing the task, the Flask web application will start running and listening for incoming requests on the specified address and port. To stop the server and return to the command line prompt, you need to press CTRL+C. This key combination sends a KeyboardInterrupt signal to the running process, prompting it to shut down gracefully. It's important to use this method to terminate the server properly and avoid leaving any lingering processes running in the background.**
 
 ### Task 9
 
