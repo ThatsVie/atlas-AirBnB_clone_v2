@@ -48,6 +48,36 @@ Clone this repository to your local machine using the following command:
 git clone https://github.com/ThatsVie/atlas-AirBnB_clone_v2.git
 ```
 ### Task 0
+Navigate to atlas-AirBnB_clone_v2 directory
+```bash
+cd atlas-AirBnB_clone_v2
+```
+Input this command to executes the Python module web_flask.0-hello_route using Python 3.
+```bash
+python3 -m web_flask.0-hello_route
+```
+Your ouput should look something like this:
+```bash
+vie@ThatsVie:~/source/atlas-AirBnB_clone_v2$ python3 -m web_flask.0-hello_route
+ * Serving Flask app '0-hello_route'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.25.115.237:5000
+Press CTRL+C to quit
+```
+Open another tab in your terminal and input this command
+```bash
+curl 0.0.0.0:5000 ; echo "" | cat -e
+```
+Your ouput should be:
+
+![Screenshot 2024-03-13 074248](https://github.com/ThatsVie/atlas-AirBnB_clone_v2/assets/143755961/cbfdd337-ac26-4832-99ab-be087ae5c6c6)
+
+Navigate to your browser. You should see Hello HBNB!
+
+![Screenshot 2024-03-13 073857](https://github.com/ThatsVie/atlas-AirBnB_clone_v2/assets/143755961/b5aab8fb-cfd7-4113-b8a1-ee64d74b30de)
 
 
 ### Task 1
