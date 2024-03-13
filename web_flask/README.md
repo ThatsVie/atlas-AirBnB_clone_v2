@@ -241,9 +241,52 @@ http://localhost:5000/number/python
 ```
 ![Screenshot 2024-03-13 092635](https://github.com/ThatsVie/atlas-AirBnB_clone_v2/assets/143755961/3b1f8fed-b0f3-41b5-aad3-ea4d0a4b21b2)
 
+**After executing the task, the Flask web application will start running and listening for incoming requests on the specified address and port. To stop the server and return to the command line prompt, you need to press CTRL+C. This key combination sends a KeyboardInterrupt signal to the running process, prompting it to shut down gracefully. It's important to use this method to terminate the server properly and avoid leaving any lingering processes running in the background.**
 
 ### Task 5
+Navigate back to your original terminal. Press CTRL+C to end the previous process if you havent already.
+Input this command to executes the Python module web_flask.5-number_template using Python 3.
+```bash
+python3 -m web_flask.5-number_template
+```
+Open another tab in your terminal and run this command:
+```bash
+curl 0.0.0.0:5000/number_template/89 ; echo ""
+```
+![Screenshot 2024-03-13 093035](https://github.com/ThatsVie/atlas-AirBnB_clone_v2/assets/143755961/86701ec8-2771-42e9-8bf9-3ede036a4707)
 
+
+In your browser
+```bash
+http://localhost:5000/number_template/89
+```
+![Screenshot 2024-03-13 093142](https://github.com/ThatsVie/atlas-AirBnB_clone_v2/assets/143755961/0a652fe8-4127-485d-bae5-ea2ea48bafeb)
+
+Back in your terminal
+```bash
+curl 0.0.0.0:5000/number_template/8.9
+```
+
+In your browser
+```bash
+http://localhost:5000/number_template/8.9
+```
+![Screenshot 2024-03-13 093435](https://github.com/ThatsVie/atlas-AirBnB_clone_v2/assets/143755961/4151ae71-72fc-40d7-ad76-f2d971e21347)
+
+Back in your terminal:
+```bash
+curl 0.0.0.0:5000/number_template/python
+```
+![Screenshot 2024-03-13 093546](https://github.com/ThatsVie/atlas-AirBnB_clone_v2/assets/143755961/5942e9c6-88df-46e0-8a61-fb4392d744a8)
+
+Back in browser:
+```bash
+http://localhost:5000/number_template/python
+```
+
+![Screenshot 2024-03-13 093638](https://github.com/ThatsVie/atlas-AirBnB_clone_v2/assets/143755961/5655ab45-cbf6-4b11-9230-a6e4bde4986c)
+
+**After executing the task, the Flask web application will start running and listening for incoming requests on the specified address and port. To stop the server and return to the command line prompt, you need to press CTRL+C. This key combination sends a KeyboardInterrupt signal to the running process, prompting it to shut down gracefully. It's important to use this method to terminate the server properly and avoid leaving any lingering processes running in the background.**
 
 ### Task 6
 
