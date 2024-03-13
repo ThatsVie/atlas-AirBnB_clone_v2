@@ -405,12 +405,14 @@ Open another tab in your terminal and input this command:
 ```bash
 curl 0.0.0.0:5000/states ; echo ""
 ```
-![Screenshot 2024-03-13 101202](https://github.com/ThatsVie/atlas-AirBnB_clone_v2/assets/143755961/d0afaad1-46d2-4c01-90ab-548d077fed5f)
+
+![Screenshot 2024-03-13 101331](https://github.com/ThatsVie/atlas-AirBnB_clone_v2/assets/143755961/bcf9370e-7da6-48ae-b613-53fad5f9a539)
 
 ```bash
 curl 0.0.0.0:5000/states/holberton ; echo ""
 ```
-![Screenshot 2024-03-12 200719](https://github.com/ThatsVie/atlas-AirBnB_clone_v2/assets/143755961/eb6cbfea-ba01-4caf-9873-54199ec3e1e4)
+
+![Screenshot 2024-03-13 103243](https://github.com/ThatsVie/atlas-AirBnB_clone_v2/assets/143755961/48b0ba5b-fdc7-4b23-90f4-be99d7d293a4)
 
 In your browser:
 ```bash
