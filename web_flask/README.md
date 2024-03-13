@@ -455,7 +455,8 @@ Then:
 ```bash
 HBNB_MYSQL_USER=hbnb_dev HBNB_MYSQL_PWD=hbnb_dev_pwd HBNB_MYSQL_HOST=localhost HBNB_MYSQL_DB=hbnb_dev_db HBNB_TYPE_STORAGE=db python3 -m web_flask.10-hbnb_filters
 ```
-![Screenshot 2024-03-13 101718](https://github.com/ThatsVie/atlas-AirBnB_clone_v2/assets/143755961/978d92b3-fd35-4762-8617-ea7d9f565ce3)
+![Screenshot 2024-03-13 144646](https://github.com/ThatsVie/atlas-AirBnB_clone_v2/assets/143755961/93951ce1-a7fe-49a2-9ac8-9d45546e1b91)
+
 
 In your browser
 ```bash
@@ -470,4 +471,4 @@ http://localhost:5000/hbnb_filters
 And the final view of your terminal:
 ![Screenshot 2024-03-13 112317](https://github.com/ThatsVie/atlas-AirBnB_clone_v2/assets/143755961/c6d33c75-3d91-4cff-8a21-da951b5bfd4c)
 
-
+K! Thanx! Bye!
