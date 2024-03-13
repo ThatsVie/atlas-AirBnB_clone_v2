@@ -407,6 +407,11 @@ curl 0.0.0.0:5000/states ; echo ""
 ```
 ![Screenshot 2024-03-13 101202](https://github.com/ThatsVie/atlas-AirBnB_clone_v2/assets/143755961/d0afaad1-46d2-4c01-90ab-548d077fed5f)
 
+```bash
+curl 0.0.0.0:5000/states/holberton ; echo ""
+```
+![Screenshot 2024-03-12 200719](https://github.com/ThatsVie/atlas-AirBnB_clone_v2/assets/143755961/eb6cbfea-ba01-4caf-9873-54199ec3e1e4)
+
 In your browser:
 ```bash
 http://localhost:5000/states
