@@ -423,13 +423,13 @@ http://localhost:5000/states/2b9a4627-8a9e-4f32-a752-9a84fa7f4efd
 curl 0.0.0.0:5000/states/holberton ; echo ""
 ```
 
-![Screenshot 2024-03-13 103243](https://github.com/ThatsVie/atlas-AirBnB_clone_v2/assets/143755961/48b0ba5b-fdc7-4b23-90f4-be99d7d293a4)
-
-In your browser:
+In your browser
 ```bash
-http://localhost:5000/states
+http://localhost:5000/states/holberton
 ```
-![Screenshot 2024-03-13 101419](https://github.com/ThatsVie/atlas-AirBnB_clone_v2/assets/143755961/4fc15320-ff51-4768-ad08-6c07415a43a2)
+
+![Screenshot 2024-03-13 104720](https://github.com/ThatsVie/atlas-AirBnB_clone_v2/assets/143755961/22af840c-14b4-4167-b884-63ce4a6fea90)
+
 
 **After executing the task, the Flask web application will start running and listening for incoming requests on the specified address and port. To stop the server and return to the command line prompt, you need to press CTRL+C. This key combination sends a KeyboardInterrupt signal to the running process, prompting it to shut down gracefully. It's important to use this method to terminate the server properly and avoid leaving any lingering processes running in the background.**
 
