@@ -30,7 +30,7 @@ Flask
 
 - **Number Odd or Even (Task 6):** Display an HTML page with "Number: n is even|odd" if n is an integer.
   
-- **Improve Engine (Task 7):**
+- **Improve Engine (Task 7):** Update pre existing files FileStorage (models/engine/file_storage.py), DBStorage (models/engine/db_storage.py), and State (models/state.py) before moving forward with tasks.
 
 - **States List (Task 8):** Display a list of all State objects present in the database.
 
@@ -47,3 +47,35 @@ Clone this repository to your local machine using the following command:
 ```bash
 git clone https://github.com/ThatsVie/atlas-AirBnB_clone_v2.git
 ```
+### Task 0
+
+
+### Task 1
+
+
+### Task 2
+
+
+### Task 3
+
+
+### Task 4
+
+
+### Task 5
+
+
+### Task 6
+
+
+### Task 8
+
+
+### Task 9
+
+
+### Task 10
+
+
+### Task 11
+
