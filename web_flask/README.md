@@ -80,8 +80,7 @@ Input this command to executes the Python module web_flask.1-hbnb_route using Py
  python3 -m web_flask.1-hbnb_route
 ```
 Your output should look something like this:
-
-![Screenshot 2024-03-13 075355](https://github.com/ThatsVie/atlas-AirBnB_clone_v2/assets/143755961/d30228fe-af20-486d-be0f-c8bbb04d6ca4)
+![Screenshot 2024-03-13 081633](https://github.com/ThatsVie/atlas-AirBnB_clone_v2/assets/143755961/9d8b9a80-5e5e-4a6c-a0af-563a76d59f05)
 
 Open another tab in your terminal and run this command
 ```bash
