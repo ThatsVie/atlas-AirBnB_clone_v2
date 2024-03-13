@@ -404,7 +404,7 @@ HBNB_MYSQL_USER=hbnb_dev HBNB_MYSQL_PWD=hbnb_dev_pwd HBNB_MYSQL_HOST=localhost H
 Open another tab in your terminal and input this command:
 ```bash
 curl 0.0.0.0:5000/states ; echo ""
-``
+```
 ![Screenshot 2024-03-13 101202](https://github.com/ThatsVie/atlas-AirBnB_clone_v2/assets/143755961/d0afaad1-46d2-4c01-90ab-548d077fed5f)
 
 In your browser:
