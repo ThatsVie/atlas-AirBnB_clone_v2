@@ -409,6 +409,17 @@ curl 0.0.0.0:5000/states ; echo ""
 ![Screenshot 2024-03-13 101331](https://github.com/ThatsVie/atlas-AirBnB_clone_v2/assets/143755961/bcf9370e-7da6-48ae-b613-53fad5f9a539)
 
 ```bash
+curl 0.0.0.0:5000/states/2b9a4627-8a9e-4f32-a752-9a84fa7f4efd ; echo ""
+```
+![Screenshot 2024-03-13 104305](https://github.com/ThatsVie/atlas-AirBnB_clone_v2/assets/143755961/e504f9bb-63f3-4fd4-be09-734396d3fb84)
+
+In your browser:
+```bash
+http://localhost:5000/states/2b9a4627-8a9e-4f32-a752-9a84fa7f4efd
+```
+![Screenshot 2024-03-13 104443](https://github.com/ThatsVie/atlas-AirBnB_clone_v2/assets/143755961/9a7ecf33-a50e-444c-9a8f-dfb03d352d58)
+
+```bash
 curl 0.0.0.0:5000/states/holberton ; echo ""
 ```
 
