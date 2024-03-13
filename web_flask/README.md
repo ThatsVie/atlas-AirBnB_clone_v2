@@ -372,7 +372,8 @@ Then:
 ```bash
 HBNB_MYSQL_USER=hbnb_dev HBNB_MYSQL_PWD=hbnb_dev_pwd HBNB_MYSQL_HOST=localhost HBNB_MYSQL_DB=hbnb_dev_db HBNB_TYPE_STORAGE=db python3 -m web_flask.8-cities_by_states
 ```
-![Screenshot 2024-03-13 100224](https://github.com/ThatsVie/atlas-AirBnB_clone_v2/assets/143755961/c745ab7a-a04b-4331-9c54-fdc11736cc24)
+
+![Screenshot 2024-03-13 145015](https://github.com/ThatsVie/atlas-AirBnB_clone_v2/assets/143755961/880f892e-ed72-4c30-8b38-4ece56bff3de)
 
 Open another tab in your terminal and input this command
 ```bash
