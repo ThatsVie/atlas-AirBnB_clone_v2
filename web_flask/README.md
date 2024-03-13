@@ -20,25 +20,25 @@ Flask
 
 - **HBNB Route (Task 1):** Display "Hello HBNB!" on the root route and "HBNB" on the /hbnb route.
 
-- **C Route (Task 2):** Display "C" followed by the value of the text variable.
+- **C Route (Task 2):** Display "C" followed by the value of the text variable. /c/<text>
 
-- **Python Route (Task 3):** Display "Python" followed by the value of the text variable (default: "is cool").
+- **Python Route (Task 3):** Display "Python" followed by the value of the text variable (default: "is cool"). /python/<text>
 
-- **Number Route (Task 4):** Display "n is a number" only if n is an integer.
+- **Number Route (Task 4):** Display "n is a number" only if n is an integer. /number/<n>
 
-- **Number Template (Task 5):** Display an HTML page with "Number: n" if n is an integer.
+- **Number Template (Task 5):** Display an HTML page with "Number: n" if n is an integer. /number_template/<n>
 
-- **Number Odd or Even (Task 6):** Display an HTML page with "Number: n is even|odd" if n is an integer.
+- **Number Odd or Even (Task 6):** Display an HTML page with "Number: n is even|odd" if n is an integer. /number_odd_or_even/<n>
   
 - **Improve Engine (Task 7):** Update pre existing files FileStorage (models/engine/file_storage.py), DBStorage (models/engine/db_storage.py), and State (models/state.py) before moving forward with tasks.
 
-- **States List (Task 8):** Display a list of all State objects present in the database.
+- **States List (Task 8):** Display a list of all State objects present in the database. /states_list
 
-- **Cities by States (Task 9):** Display a list of all State objects and their linked City objects.
+- **Cities by States (Task 9):** Display a list of all State objects and their linked City objects. /cities_by_states
 
-- **States and State (Task 10):** Display detailed information about states and their linked cities.
+- **States and State (Task 10):** Display detailed information about states and their linked cities. /states and /states/<id>
 
-- **HBNB Filters (Task 11):** Display a HTML page with filters for states, cities, and amenities.
+- **HBNB Filters (Task 11):** Display a HTML page with filters for states, cities, and amenities. /hbnb_filters
 
 ## Usage
 
