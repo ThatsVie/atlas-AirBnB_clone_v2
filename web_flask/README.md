@@ -157,6 +157,43 @@ Input this command to executes the Python module web_flask.3-python_route using 
 ```bash
 python3 -m web_flask.3-python_route
 ```
+![Screenshot 2024-03-13 081804](https://github.com/ThatsVie/atlas-AirBnB_clone_v2/assets/143755961/fe6286e7-4f0b-4aa8-915e-741f04ad7b40)
+
+Open another tab in your terminal
+Input this command
+```bash
+curl -Ls 0.0.0.0:5000/python/is_magic ; echo "" | cat -e
+```
+![Screenshot 2024-03-13 081944](https://github.com/ThatsVie/atlas-AirBnB_clone_v2/assets/143755961/2ca2d4f2-ed40-4f25-98af-3ab7f705c03d)
+
+Input this command
+```bash
+curl -Ls 0.0.0.0:5000/python ; echo "" | cat -e
+```
+![Screenshot 2024-03-13 082036](https://github.com/ThatsVie/atlas-AirBnB_clone_v2/assets/143755961/c74d6d97-7597-42c7-8663-26b7e0937577)
+
+Input this command:
+```bash
+curl -Ls 0.0.0.0:5000/python/ ; echo "" | cat -e
+```
+![Screenshot 2024-03-13 082149](https://github.com/ThatsVie/atlas-AirBnB_clone_v2/assets/143755961/60ce2c93-d9be-4f74-a18c-d1d322d78808)
+
+Now in your browser:
+```bash
+http://localhost:5000/python/is_magic
+```
+![Screenshot 2024-03-13 082246](https://github.com/ThatsVie/atlas-AirBnB_clone_v2/assets/143755961/9fdb8597-b2f5-40bb-b48a-664304452691)
+
+```bash
+http://localhost:5000/python
+```
+
+![Screenshot 2024-03-13 082414](https://github.com/ThatsVie/atlas-AirBnB_clone_v2/assets/143755961/6dd6d796-3f1a-4613-9b7c-6556548e4bb7)
+
+```bash
+http://localhost:5000/python/
+```
+![Screenshot 2024-03-13 082535](https://github.com/ThatsVie/atlas-AirBnB_clone_v2/assets/143755961/d4bb80ea-ad5c-4b17-8bc2-90bea8440346)
 
 
 ### Task 4
