@@ -346,7 +346,7 @@ Then:
 ```bash
 HBNB_MYSQL_USER=hbnb_dev HBNB_MYSQL_PWD=hbnb_dev_pwd HBNB_MYSQL_HOST=localhost HBNB_MYSQL_DB=hbnb_dev_db HBNB_TYPE_STORAGE=db python3 -m web_flask.7-states_list
 ```
-![Screenshot 2024-03-13 095111](https://github.com/ThatsVie/atlas-AirBnB_clone_v2/assets/143755961/e170b50c-099e-4098-a1bf-ce341742c452)
+![Screenshot 2024-03-13 095111](https://github.com/ThatsVie/atlas-AirBnB_clone_v2/assets/143755961/d12b72dc-05d6-4671-be3d-6dc60cfad0c9)
 
 Open another tab in your terminal and input this command
 ```bash
@@ -363,7 +363,30 @@ http://localhost:5000/states_list
 **After executing the task, the Flask web application will start running and listening for incoming requests on the specified address and port. To stop the server and return to the command line prompt, you need to press CTRL+C. This key combination sends a KeyboardInterrupt signal to the running process, prompting it to shut down gracefully. It's important to use this method to terminate the server properly and avoid leaving any lingering processes running in the background.**
 
 ### Task 9
+Navigate back to your original terminal. Press CTRL+C to end the previous process if you havent already.
+Run this command to concatenate data to work with
+```bash
+cat 100-hbnb.sql | mysql -uroot -p
+```
+Then:
+```bash
+HBNB_MYSQL_USER=hbnb_dev HBNB_MYSQL_PWD=hbnb_dev_pwd HBNB_MYSQL_HOST=localhost HBNB_MYSQL_DB=hbnb_dev_db HBNB_TYPE_STORAGE=db python3 -m web_flask.8-cities_by_states
+```
+![Screenshot 2024-03-13 100224](https://github.com/ThatsVie/atlas-AirBnB_clone_v2/assets/143755961/c745ab7a-a04b-4331-9c54-fdc11736cc24)
 
+Open another tab in your terminal and input this command
+```bash
+curl 0.0.0.0:5000/cities_by_states ; echo ""
+```
+![Screenshot 2024-03-13 100507](https://github.com/ThatsVie/atlas-AirBnB_clone_v2/assets/143755961/df4d553e-6bbd-4669-8f38-fbd87e3a0391)
+
+In your browser:
+```bash
+http://localhost:5000/cities_by_states
+```
+![Screenshot 2024-03-13 100610](https://github.com/ThatsVie/atlas-AirBnB_clone_v2/assets/143755961/4414e941-76a0-4d7c-9374-4b970febbbad)
+
+**After executing the task, the Flask web application will start running and listening for incoming requests on the specified address and port. To stop the server and return to the command line prompt, you need to press CTRL+C. This key combination sends a KeyboardInterrupt signal to the running process, prompting it to shut down gracefully. It's important to use this method to terminate the server properly and avoid leaving any lingering processes running in the background.**
 
 ### Task 10
 
