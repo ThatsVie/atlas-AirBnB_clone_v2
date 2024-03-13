@@ -389,7 +389,39 @@ http://localhost:5000/cities_by_states
 **After executing the task, the Flask web application will start running and listening for incoming requests on the specified address and port. To stop the server and return to the command line prompt, you need to press CTRL+C. This key combination sends a KeyboardInterrupt signal to the running process, prompting it to shut down gracefully. It's important to use this method to terminate the server properly and avoid leaving any lingering processes running in the background.**
 
 ### Task 10
+Navigate back to your original terminal. Press CTRL+C to end the previous process if you havent already.
+Run this command to concatenate data to work with
+```bash
+cat 100-hbnb.sql | mysql -uroot -p
+```
+Then:
+```bash
+HBNB_MYSQL_USER=hbnb_dev HBNB_MYSQL_PWD=hbnb_dev_pwd HBNB_MYSQL_HOST=localhost HBNB_MYSQL_DB=hbnb_dev_db HBNB_TYPE_STORAGE=db python3 -m web_flask.9-states
+```
+![Screenshot 2024-03-13 101202](https://github.com/ThatsVie/atlas-AirBnB_clone_v2/assets/143755961/91a8b638-9b71-411b-9432-29ce5c5dbb65)
 
+
+Open another tab in your terminal and input this command:
+```bash
+curl 0.0.0.0:5000/states ; echo ""
+``
+![Screenshot 2024-03-13 101202](https://github.com/ThatsVie/atlas-AirBnB_clone_v2/assets/143755961/d0afaad1-46d2-4c01-90ab-548d077fed5f)
+
+In your browser:
+```bash
+http://localhost:5000/states
+```
+![Screenshot 2024-03-13 101419](https://github.com/ThatsVie/atlas-AirBnB_clone_v2/assets/143755961/4fc15320-ff51-4768-ad08-6c07415a43a2)
+
+**After executing the task, the Flask web application will start running and listening for incoming requests on the specified address and port. To stop the server and return to the command line prompt, you need to press CTRL+C. This key combination sends a KeyboardInterrupt signal to the running process, prompting it to shut down gracefully. It's important to use this method to terminate the server properly and avoid leaving any lingering processes running in the background.**
 
 ### Task 11
-
+Navigate back to your original terminal. Press CTRL+C to end the previous process if you havent already.
+Run this command to concatenate data to work with
+```bash
+cat 100-hbnb.sql | mysql -uroot -p
+```
+Then:
+```bash
+HBNB_MYSQL_USER=hbnb_dev HBNB_MYSQL_PWD=hbnb_dev_pwd HBNB_MYSQL_HOST=localhost HBNB_MYSQL_DB=hbnb_dev_db HBNB_TYPE_STORAGE=db python3 -m web_flask.10-hbnb_filters
+```
