@@ -408,6 +408,13 @@ curl 0.0.0.0:5000/states ; echo ""
 
 ![Screenshot 2024-03-13 101331](https://github.com/ThatsVie/atlas-AirBnB_clone_v2/assets/143755961/bcf9370e-7da6-48ae-b613-53fad5f9a539)
 
+In your browser:
+```bash
+http://localhost:5000/states
+```
+
+![Screenshot 2024-03-13 112833](https://github.com/ThatsVie/atlas-AirBnB_clone_v2/assets/143755961/262c21a4-0bce-40de-86f2-250a7fc1bf53)
+
 ```bash
 curl 0.0.0.0:5000/states/2b9a4627-8a9e-4f32-a752-9a84fa7f4efd ; echo ""
 ```
@@ -453,3 +460,8 @@ http://localhost:5000/hbnb_filters
 ![Screenshot 2024-03-13 101928](https://github.com/ThatsVie/atlas-AirBnB_clone_v2/assets/143755961/2e55ec20-a9e9-4ca7-88ec-9c4339cc7fd2)
 
 ![Screenshot 2024-03-13 101944](https://github.com/ThatsVie/atlas-AirBnB_clone_v2/assets/143755961/cb96a801-eda6-4431-8181-8bb3b1d90388)
+
+And the final view of your terminal:
+![Screenshot 2024-03-13 112317](https://github.com/ThatsVie/atlas-AirBnB_clone_v2/assets/143755961/c6d33c75-3d91-4cff-8a21-da951b5bfd4c)
+
+
