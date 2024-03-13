@@ -198,6 +198,48 @@ http://localhost:5000/python/
 **After executing the task, the Flask web application will start running and listening for incoming requests on the specified address and port. To stop the server and return to the command line prompt, you need to press CTRL+C. This key combination sends a KeyboardInterrupt signal to the running process, prompting it to shut down gracefully. It's important to use this method to terminate the server properly and avoid leaving any lingering processes running in the background.**
 
 ### Task 4
+Navigate back to your original terminal. Press CTRL+C to end the previous process if you havent already.
+Input this command to executes the Python module web_flask.4-number_route using Python 3.
+```bash
+python3 -m web_flask.4-number_route
+```
+![Screenshot 2024-03-13 091601](https://github.com/ThatsVie/atlas-AirBnB_clone_v2/assets/143755961/9c57aaa9-215e-4e72-8146-59f8fccc69f7)
+
+Open another tab in your terminal and run this command:
+```bash
+curl 0.0.0.0:5000/number/89 ; echo "" | cat -e
+```
+![Screenshot 2024-03-13 091544](https://github.com/ThatsVie/atlas-AirBnB_clone_v2/assets/143755961/f88a0c7f-a8a6-4e23-85a4-3e445ef3c1e1)
+On the browser:
+```bash
+http://localhost:5000/number/89
+```
+![Screenshot 2024-03-13 091811](https://github.com/ThatsVie/atlas-AirBnB_clone_v2/assets/143755961/15114a8a-a344-4e2e-9d6a-3c52dc90777e)
+
+Back in your terminal:
+```bash
+curl 0.0.0.0:5000/number/8.9
+```
+![Screenshot 2024-03-13 092015](https://github.com/ThatsVie/atlas-AirBnB_clone_v2/assets/143755961/906746dc-ab24-4494-a9cc-1981b3ae5917)
+
+In your browser:
+```bash
+http://localhost:5000/number/8.9
+```
+![Screenshot 2024-03-13 091943](https://github.com/ThatsVie/atlas-AirBnB_clone_v2/assets/143755961/875822d1-b7b6-478d-8a5b-d0c61ba01776)
+
+Back in your terminal
+```bash
+curl 0.0.0.0:5000/number/python
+```
+![Screenshot 2024-03-13 092527](https://github.com/ThatsVie/atlas-AirBnB_clone_v2/assets/143755961/0ec4f0f9-a0c1-4783-82d5-b9a3f2724dd6)
+
+
+In your browser
+```bash
+http://localhost:5000/number/python
+```
+![Screenshot 2024-03-13 092635](https://github.com/ThatsVie/atlas-AirBnB_clone_v2/assets/143755961/3b1f8fed-b0f3-41b5-aad3-ea4d0a4b21b2)
 
 
 ### Task 5
