@@ -415,6 +415,8 @@ http://localhost:5000/states
 
 ![Screenshot 2024-03-13 112833](https://github.com/ThatsVie/atlas-AirBnB_clone_v2/assets/143755961/262c21a4-0bce-40de-86f2-250a7fc1bf53)
 
+In your terminal:
+
 ```bash
 curl 0.0.0.0:5000/states/2b9a4627-8a9e-4f32-a752-9a84fa7f4efd ; echo ""
 ```
